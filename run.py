@@ -1,68 +1,14 @@
 import random
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+import man_art
+import words
 
 end_of_game = False
-word_list = ["python", "cat", "container", "leopard"]
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(words.word_list)
 word_length = len(chosen_word)
-
 lives = 6
+
+from man_art import logo, stages
+print(logo)
 
 #Testing code
 print(chosen_word)
@@ -79,11 +25,15 @@ while not end_of_game:
     Check guessed letter. Prints correct letter in place and if lives = 0 
     then print "You Lose" and end game.
     """
+    if guess in display:
+        print(f"You've already guessed {letter}")
+        
     for position in range(word_length):
         letter = chosen_word[position]
        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
         if letter == guess:
             display[position] = letter
+        elif guess != 
 
     if guess not in chosen_word:
         lives -= 1
