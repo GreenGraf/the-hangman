@@ -22,7 +22,7 @@ def game_rules():
     print("  You have six chances to survive the hangman's noose.")
     print()
     print("Would you like to try to beat the Hangman's noose?") 
-    play_now = input(" Enter yes or no: ")
+    play_now = input("Enter yes or no: ")
     if play_now.lower() == "yes":
         clearConsole()
         play_game()
@@ -33,10 +33,12 @@ def game_rules():
         main()
 
     else:
+        clearConsole()
         print()
         print('  Invalid entry.')
-        print("  Please enter 'y' or 'n'.")
+        print("  Please enter 'yes' or 'no'.")
         print(' ***************')
+        game_rules()
 
 def play_game():
     chosen_word = random.choice(words.word_list)
@@ -80,7 +82,8 @@ def play_game():
             lives -= 1
             if lives == 0:
                 end_of_game = True
-                print("You lose.") 
+                print("You lose.")
+                play_again()
 
         #Join all the elements in the list and turn it into a String.
         print(f"{' '.join(display)}")
@@ -102,14 +105,14 @@ def play_again():
     print()
     print()
     print("Would you like to play again?")
-    play_again = input(" Enter y or n: ")
+    play_again = input(" Enter 'yes' or 'no': ")
 
-    if play_again.lower() == "y":
+    if play_again.lower() == "yes":
         clearConsole()
         play_game()
 
     
-    elif play_again.lower() == 'n':
+    elif play_again.lower() == 'no':
         clearConsole()
 
         print()
@@ -126,7 +129,7 @@ def play_again():
     else:
         print()
         print('  Invalid entry.')
-        print("  Please enter 'y' or 'n'.")
+        print("  Please enter 'yes' or 'no'.")
         print('  ***************')
 
 def main():
@@ -142,7 +145,7 @@ def main():
     print()
 
     print('Would you like to see the rules or play the game?')
-    choice = input(" Enter 'rules' or 'play: ")
+    choice = input("Enter 'rules' or 'play': ")
 
     if choice.lower() == "rules":
         clearConsole()
@@ -153,9 +156,12 @@ def main():
         play_game()
 
     else:
+        clearConsole()
+        print(logo)
         print()
         print('  Invalid entry.')
         print("  Please enter 'rules' or 'play'")
         print('  ***************')
-
+        main()
+        
 main()
