@@ -3,23 +3,21 @@ import man_art
 import words
 import os
 
-
-
 #clears console after each guess
 clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
-end_of_game = False
 chosen_word = random.choice(words.word_list)
 word_length = len(chosen_word)
-lives = 6
 
 from man_art import logo, stages
 print(logo)
 
+
 def play_game():
     #Testing code
     print(chosen_word)
-
+    end_of_game = False
+    lives = 6
     #Create blank spaces for letter in random word
     display = []
     for _ in range(word_length):
@@ -84,6 +82,5 @@ def main():
     print()
 
     play_game()
-
 
 main()
