@@ -66,6 +66,37 @@ def play_game():
         #Print ASCII Hangman 
         print(stages[lives])
 
+def play_again():
+    """
+    This function is to restart the game
+    """
+    print()
+    print()
+    print("Would you like to play again?")
+    play_again = input(" Enter y or n: ")
+
+    if play_again.lower() == "y":
+        play_game()
+
+    
+    elif play_again.lower() == 'no':
+        print()
+        print()
+        print("COWARD! HA HA HA!"
+        print()
+        print('  Some back soon ...')
+        print()
+        print('***************')
+        print()
+
+        quit()
+
+    else:
+        print()
+        print('  Invalid entry.')
+        print("  Please enter 'y' or 'n'.")
+        print('***************')
+
 def main():
     """
     Print welcome screen and call functions
