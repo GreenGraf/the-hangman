@@ -11,6 +11,9 @@ from man_art import logo, stages, gallows
 print(logo)
 
 def game_rules():
+    """
+    Function for the rules section of the game
+    """
     print('====================================')
     print()
     print('                 RULES:')
@@ -47,6 +50,12 @@ def play_game():
     #Testing code
     print(chosen_word)
 
+    """
+    Core logic of the game —
+    Check guessed letter. Prints correct letter in place and if lives = 0 
+    then print "You Lose" and end game.
+    """
+
     end_of_game = False
     lives = 6
     #Create blank spaces for letter in random word
@@ -58,11 +67,6 @@ def play_game():
         guess = input("Guess a letter: ").lower()
         
         clearConsole()
-
-        """
-        Check guessed letter. Prints correct letter in place and if lives = 0 
-        then print "You Lose" and end game.
-        """
 
         if not guess.isalpha():
             print("You did not enter a letter. Please try again by entering a letter.")
