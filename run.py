@@ -7,13 +7,14 @@ import os
 #clears console after each guess
 clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
-from man_art import logo, stages
+from man_art import logo, stages, gallows 
 print(logo)
 
 
 def play_game():
     chosen_word = random.choice(words.word_list)
     word_length = len(chosen_word)
+    # print(gallows[stage])
     #Testing code
     print(chosen_word)
 
@@ -39,22 +40,20 @@ def play_game():
             continue
 
         if guess in display:
-            print(f"You've already guessed {letter}. Try again.")
+            print(f"You've already guessed '{guess}'. Try again.")
 
         for position in range(word_length):
             letter = chosen_word[position]
             if letter == guess:
                 display[position] = letter
-                print("Good guess.")
+                print(f"You guessed '{guess}' ... good guess.")
         
-
         if guess not in chosen_word:
-            print(f"You guessed {guess}. Thant's not in the word. You lose a life. HA HA HA!")
+            print(f"You guessed '{guess}'. Thant's not in the word. You lose a life. HA HA HA!")
             lives -= 1
             if lives == 0:
                 end_of_game = True
-                print("You lose.")
-                play_again()
+                print("You lose.")  
 
         #Join all the elements in the list and turn it into a String.
         print(f"{' '.join(display)}")
@@ -62,6 +61,7 @@ def play_game():
         #Check if user has guessed all letters.
         if "_" not in display:
             end_of_game = True
+            print(lives)
             print("You win.")
             play_again()
 
@@ -87,11 +87,11 @@ def play_again():
 
         print()
         print()
-        print("COWARD! HA HA HA!")
+        print("  COWARD! HA HA HA!")
         print() 
         print('  Come back soon ...')
         print()
-        print('***************')
+        print('  ***************')
         print()
 
         quit()
@@ -100,7 +100,7 @@ def play_again():
         print()
         print('  Invalid entry.')
         print("  Please enter 'y' or 'n'.")
-        print('***************')
+        print('  ***************')
 
 def main():
     """
@@ -116,11 +116,11 @@ def main():
     print()
     print('RULES:')
     print()
-    print('Follow the prompts.')
-    print('Guess a letter.')
-    print("You have six chances to survive the hangman's noose.")
+    print('  Follow the prompts.')
+    print('  Guess a letter.')
+    print("  You have six chances to survive the hangman's noose.")
     print()
-    print('******  GOOD LUCK  ******')
+    print('  ******  GOOD LUCK  ******')
     print()
     print()
 
