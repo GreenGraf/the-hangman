@@ -137,6 +137,7 @@ def play_again():
         print("  Please enter 'yes' or 'no'.")
         print('  ***************')
 
+
 def main():
     """
     Print welcome screen and call functions
