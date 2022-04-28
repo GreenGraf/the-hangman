@@ -3,17 +3,17 @@ import man_art
 import words
 import os
 
+
 #clears console after each guess
 clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
-
-chosen_word = random.choice(words.word_list)
-word_length = len(chosen_word)
 
 from man_art import logo, stages
 print(logo)
 
 
 def play_game():
+    chosen_word = random.choice(words.word_list)
+    word_length = len(chosen_word)
     #Testing code
     print(chosen_word)
 
@@ -54,6 +54,7 @@ def play_game():
             if lives == 0:
                 end_of_game = True
                 print("You lose.")
+                play_again()
 
         #Join all the elements in the list and turn it into a String.
         print(f"{' '.join(display)}")
@@ -62,6 +63,7 @@ def play_game():
         if "_" not in display:
             end_of_game = True
             print("You win.")
+            play_again()
 
         #Print ASCII Hangman 
         print(stages[lives])
@@ -76,15 +78,18 @@ def play_again():
     play_again = input(" Enter y or n: ")
 
     if play_again.lower() == "y":
+        clearConsole()
         play_game()
 
     
-    elif play_again.lower() == 'no':
+    elif play_again.lower() == 'n':
+        clearConsole()
+
         print()
         print()
-        print("COWARD! HA HA HA!"
-        print()
-        print('  Some back soon ...')
+        print("COWARD! HA HA HA!")
+        print() 
+        print('  Come back soon ...')
         print()
         print('***************')
         print()
