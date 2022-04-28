@@ -38,31 +38,48 @@ Built with Python and deployed on Heroku, this is a terminal-based version of th
 
 <br> 
 
-## Existing Features
+## Screens
 
-#### Start Screen
+### Start Screen
 
-![Start]()
+![Start](image/start.PNG)
 
-#### Game Screen
+### Rules Screen
 
-![Game]()
+![Rules](image/rules.PNG)
+
+### Game Screen
+
+![Game Start](image/first-guess.PNG)
+
+#### Wrong Answer
+
+![Wrong Answer](image/guess-wrong.PNG) 
+
+#### Correct Answer
+
+![Correct Answer](image/good-guess.PNG)
+
+### End Screens
+
+#### Win
+
+![Win](image/win.PNG)
+
+#### Lose
+
+![Lose](image/you-lose.PNG)
+
+### Input Validation
+
+![Validation](image/rules-validation.PNG)
 
 <br>
 
-### End Screen
+### Errors
+If the user guesses a letter that is in the secret word more than once then the screen will outpus " ... good guess" for each time the letter occurs. Ideally it should only say it once.
 
-* Winner
-
-![Winner]()
-
-* Loser
-
-![Loser]()
-
-<br>
-
-### Feedback
+![Error](image/guess-correct.PNG)
 
 ### Features Left to Implement 
 * Seperate pages for the most significant parts of the park which describes them in further detail.
@@ -78,28 +95,13 @@ Built with Python and deployed on Heroku, this is a terminal-based version of th
 
 * **Testing tools are credited and mentioned in the next section**
 
-## Testing
+## Validator Testing
 
-The game was deployed and the code was tested using PEP8
+The game was deployed and the code was tested using PEP8.
 
-### Validator Testing
+Initially there were quite a number of small errors but they were easilly remidied.
 
-
-#### Lighthouse — Dev Tools
-
-* I used Lighthouse to test my sites accessability and it received a very good score on desktop and mobile.
-
-![desktop](assets/screenshots/lighthouse-desktop.JPG) 
-
-* While accessability on mobile was great, performance could improve. After a look through the details, I realised that two of the images could be reduced in size. I will implement this at a later date as it's not inside the scope of this particular project.
-
-![desktop](assets/screenshots/lighthouse-mobile.JPG) 
-
- #### WAVE
-
- * I also tested the site with [WAVE](https://wave.webaim.org/) and found some accessibility alerts which I easilly fixed.
-
-![WAVE](assets/screenshots/wave.JPG)   
+![PEP8](image/pep8.PNG)
 
 ## Deployment
 
@@ -138,14 +140,14 @@ The game was deployed and the code was tested using PEP8
 
 ## Credits
 
-I like to say a massive "Thank You" to my mentor, Ben Kavanagh. He's a fantastic motivator and extremely helpful. Also a big thanks to all the helpful people in the Slack community!
+I like to say a massive "Thank You" to my mentor, Ben Kavanagh. He's a fantastic motivator and extremely helpful. I would also like to thanks my classmates and cohort facilitator, Kasia Bogucka. Also a big thanks to all the helpful people in the Slack community!
 
 ### Code
 
-* Python code was adapted and learned from the following sources: 
-    * Core logic adapted from this tutorial on Udemy: [Udemy](https://www.udemy.com/course/100-days-of-code/learn/lecture/19140848#overview), as well as the word dictionary and hangman ASCII's
-    * Python tips from Corey Schafer on YouTube [YouTube](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
-    * The Hangman title from ASCII generator [ASCII](http://www.network-science.de/ascii/)
-    * 
+Python code was adapted and learned from the following sources: 
+* Core logic adapted from this tutorial on [Udemy](https://www.udemy.com/course/    
+* Python tips from Corey Schafer on [YouTube](https://www.youtube.com/channel/      UCCezIgC97PvUuR4_gbFUs5g)
+* The Hangman title from [ASCII](http://www.network-science.de/ascii/) generator.
+
 
 

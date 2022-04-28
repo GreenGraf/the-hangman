@@ -96,7 +96,6 @@ def play_game():
         # Check if user has guessed all letters.
         if "_" not in display:
             end_of_game = True
-            print(lives)
             print()
             print("You win!")
             play_again()
@@ -137,7 +136,6 @@ def play_again():
         print('  Invalid entry.')
         print("  Please enter 'yes' or 'no'.")
         print('  ***************')
-
 
 def main():
     """
