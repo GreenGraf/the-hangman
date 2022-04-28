@@ -10,6 +10,33 @@ clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 from man_art import logo, stages, gallows 
 print(logo)
 
+def game_rules():
+    print('====================================')
+    print()
+    print('                 RULES:')
+    print()  
+    print('====================================')
+    print('  A secret word will be chosen at random.')   
+    print('  You must try to guess what the word is, one letter at a time.')
+    print('  Guess a letter and press enter/return key.')
+    print("  You have six chances to survive the hangman's noose.")
+    print()
+    print("Would you like to try to beat the Hangman's noose?") 
+    play_now = input(" Enter yes or no: ")
+    if play_now.lower() == "yes":
+        clearConsole()
+        play_game()
+
+    
+    elif play_now.lower() == 'no':
+        clearConsole()
+        main()
+
+    else:
+        print()
+        print('  Invalid entry.')
+        print("  Please enter 'y' or 'n'.")
+        print(' ***************')
 
 def play_game():
     chosen_word = random.choice(words.word_list)
@@ -53,7 +80,7 @@ def play_game():
             lives -= 1
             if lives == 0:
                 end_of_game = True
-                print("You lose.")  
+                print("You lose.") 
 
         #Join all the elements in the list and turn it into a String.
         print(f"{' '.join(display)}")
@@ -106,7 +133,6 @@ def main():
     """
     Print welcome screen and call functions
     """
-
     print()
     print('====================================')
     print()
@@ -114,16 +140,22 @@ def main():
     print()
     print('====================================')
     print()
-    print('RULES:')
-    print()
-    print('  Follow the prompts.')
-    print('  Guess a letter.')
-    print("  You have six chances to survive the hangman's noose.")
-    print()
-    print('  ******  GOOD LUCK  ******')
-    print()
-    print()
 
-    play_game()
+    print('Would you like to see the rules or play the game?')
+    choice = input(" Enter 'rules' or 'play: ")
+
+    if choice.lower() == "rules":
+        clearConsole()
+        game_rules()
+    
+    elif choice.lower() == "play":
+        clearConsole()
+        play_game()
+
+    else:
+        print()
+        print('  Invalid entry.')
+        print("  Please enter 'rules' or 'play'")
+        print('  ***************')
 
 main()
