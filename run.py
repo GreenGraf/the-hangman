@@ -33,12 +33,13 @@ def play_game():
         then print "You Lose" and end game.
         """
         if guess in display:
-            print(f"You've already guessed {letter}")
+            print(f"You've already guessed {letter}. Try again.")
 
         for position in range(word_length):
             letter = chosen_word[position]
             if letter == guess:
                 display[position] = letter
+                print("Good guess.")
         
 
         if guess not in chosen_word:

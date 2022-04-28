@@ -6,6 +6,10 @@ stages = ['''
  / \  |
       |
 =========
+
+You've Been Executed. HA HA HA!
+
+******  GAME OVER  ******
 ''', '''
   +---+
   |   |
