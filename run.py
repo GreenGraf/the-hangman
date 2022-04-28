@@ -16,6 +16,7 @@ print(logo)
 def play_game():
     #Testing code
     print(chosen_word)
+
     end_of_game = False
     lives = 6
     #Create blank spaces for letter in random word
@@ -32,6 +33,11 @@ def play_game():
         Check guessed letter. Prints correct letter in place and if lives = 0 
         then print "You Lose" and end game.
         """
+
+        if not guess.isalpha():
+            print("You did not enter a letter. Please try again by entering a letter.")
+            continue
+
         if guess in display:
             print(f"You've already guessed {letter}. Try again.")
 
