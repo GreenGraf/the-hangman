@@ -6,17 +6,13 @@ Take a Look [Here](https://the-hangman-mikeol.herokuapp.com/)
 
 <br>
 
-![Am I Responsive])
+![Am I Responsive](image/responsive.PNG)
 
 ## Portfolio Project 3
 
 Built with Python and deployed on Heroku, this is a terminal-based version of the popular word guessing game, Hangman. The user must guess each letter of a randomly generated, secret word. The user is represented by a stick figure, to be hung from a gallows. They have six lives with which to win the game. If they guess a letter that is not contained in the secret word, then they lose a life and the hangman draws a part of the users body on the noose.
 
-### Purpose
-
 <br> 
-
-## User Experience Design
 
 ### Strategy 
 
@@ -41,10 +37,6 @@ Built with Python and deployed on Heroku, this is a terminal-based version of th
     * Make a game that is replayable.
 
 <br> 
-
-#### Surface
-The idea behind the aesthetic of the website is to convey friendliness, a sense of adventure, and a connection with nature in modern times.
-
 
 ## Existing Features
 
@@ -112,9 +104,19 @@ The game was deployed and the code was tested using PEP8
 ## Deployment
 
 * The app was deployed on Heroku using the following method:
-    *
-    *
-    *
+    * ***Because of a data breach on at Heroku, the app had to be connected manually from the terminal***
+    * Log in to Heroku or create an account if required.
+    * Click the button labeled New from the dashboard in the top right corner, just below the header.
+    * From the drop-down menu select "Create new app".
+    * Enter a unique app name. 
+    * Choose Europe as region
+    * Click on the "Create app" button.
+    * Navigate to the settings tab and scroll down to the "Config Vars" section.
+    * Click the button labelled "Reveal Config Vars" and enter the "key" as PORT, the "value" as 8000 and click the "add" button.
+    * Scroll down to the buildpacks section of the settings page and click "add buildpack" select "Python" and click "Save Changes".
+    * Repeat step 11 but this time add "node.js" instead of python.
+    * Navigate to the "Deploy" tab.
+    * Select Github as the deployment method.
 
 ## Clone and Fork
 
@@ -141,9 +143,9 @@ I like to say a massive "Thank You" to my mentor, Ben Kavanagh. He's a fantastic
 ### Code
 
 * Python code was adapted and learned from the following sources: 
-    * Python tips from 
-    * 
+    * Core logic adapted from this tutorial on Udemy: [Udemy](https://www.udemy.com/course/100-days-of-code/learn/lecture/19140848#overview), as well as the word dictionary and hangman ASCII's
+    * Python tips from Corey Schafer on YouTube [YouTube](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
+    * The Hangman title from ASCII generator [ASCII](http://www.network-science.de/ascii/)
     * 
 
-### Content
 

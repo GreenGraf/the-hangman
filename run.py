@@ -51,7 +51,6 @@ def game_rules():
 def play_game():
     chosen_word = random.choice(words.word_list)
     word_length = len(chosen_word)
-    print(chosen_word)
     """
     Core logic of the game —
     Check guessed letter. Prints correct letter in place and if lives = 0
