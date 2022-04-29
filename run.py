@@ -1,12 +1,14 @@
-import random
-import man_art
-import words
 import os
-from man_art import logo, stages, gallows
+import random
+
+import words
+from man_art import logo, stages
 
 
-# clears console
-def clearConsole():
+def clear_console():
+    """
+    Clears console
+    """
     command = 'clear'
     if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
         command = 'cls'
@@ -32,15 +34,15 @@ def game_rules():
     print("Would you like to try to beat the Hangman's noose?")
     play_now = input("Enter yes or no: ")
     if play_now.lower() == "yes":
-        clearConsole()
+        clear_console()
         play_game()
 
     elif play_now.lower() == 'no':
-        clearConsole()
-        main()
+         clear_console()
+         main()
 
     else:
-        clearConsole()
+        clear_console()
         print()
         print('  Invalid entry.')
         print("  Please enter 'yes' or 'no'.")
@@ -67,7 +69,7 @@ def play_game():
     while not end_of_game:
         guess = input("Guess a letter: ").lower()
 
-        clearConsole()
+        clear_console()
 
         if not guess.isalpha():
             print("You did not enter a letter. Please try again.")
@@ -83,7 +85,7 @@ def play_game():
                 print(f"You guessed '{guess}' ... good guess.")
 
         if guess not in chosen_word:
-            print(f"You guessed '{guess}'. Thant's not in the word. You lose a life. HA HA HA!")
+            print(f"You guessed '{guess}'. That's not in the word. You lose a life. HA HA HA!")
             lives -= 1
             if lives == 0:
                 end_of_game = True
@@ -114,11 +116,11 @@ def play_again():
     play_again = input(" Enter 'yes' or 'no': ")
 
     if play_again.lower() == "yes":
-        clearConsole()
+        clear_console()
         play_game()
 
     elif play_again.lower() == 'no':
-        clearConsole()
+        clear_console()
 
         print()
         print()
@@ -155,15 +157,15 @@ def main():
     choice = input("Enter 'rules' or 'play': ")
 
     if choice.lower() == "rules":
-        clearConsole()
+        clear_console()
         game_rules()
 
     elif choice.lower() == "play":
-        clearConsole()
+        clear_console()
         play_game()
 
     else:
-        clearConsole()
+        clear_console()
         print(logo)
         print()
         print('  Invalid entry.')
