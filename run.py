@@ -114,19 +114,19 @@ def play_game():
                     print(stages[lives])
                     play_again()
 
-    # Print ASCII Hangman
-    print(stages[lives])
+        # Print ASCII Hangman
+        print(stages[lives])
 
-    # Join all the elements in the list and turn it into a String.
-    print(f"{' '.join(display)}")
-    print("")   
+        # Join all the elements in the list and turn it into a String.
+        print(f"{' '.join(display)}")
+        print("")   
 
-    # Check if user has guessed all letters.
-    if "_" not in display:
-        end_of_game = True
-        print()
-        print("You win!")
-        play_again()
+        # Check if user has guessed all letters.
+        if "_" not in display:
+            end_of_game = True
+            print()
+            print("You win!")
+            play_again()
 
 
 def play_again():
@@ -136,7 +136,7 @@ def play_again():
     print()
     print()
     print("Would you like to play again?")
-    play_again = input(" Enter 'yes' or 'no': ")
+    play_again = input("Enter 'yes' or 'no': ")
 
     if play_again.lower() == "yes":
         clear_console()
