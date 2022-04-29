@@ -44,9 +44,9 @@ def game_rules():
     else:
         clear_console()
         print()
-        print('  Invalid entry.')
-        print("  Please enter 'yes' or 'no'.")
-        print(' ***************')
+        print('Invalid entry.')
+        print("Please enter 'yes' or 'no'.")
+        print('***************')
         game_rules()
 
 
@@ -59,8 +59,6 @@ def play_game():
     chosen_word = random.choice(words.word_list)
     word_length = len(chosen_word)
 
-    print(chosen_word)
-
     end_of_game = False
     lives = 6
 
@@ -71,7 +69,7 @@ def play_game():
     display = []
     for _ in range(word_length):
         display += "_"
-    
+
     # Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
     print("")
@@ -80,7 +78,7 @@ def play_game():
         valid_word = True
         guess = input("Guess a letter: ").lower()
         clear_console()
-        
+
         if not guess.isalpha():
             print("You did not enter a letter. Please try again.")
             valid_word = False
@@ -105,7 +103,8 @@ def play_game():
                         duplicate = True
 
             if guess not in chosen_word:
-                print(f"You guessed '{guess}'. That's not in the word. You lose a life. HA HA HA!")
+                print(f"You guessed '{guess}'. That's not in the word. You\
+                         lose a life. HA HA HA!")
                 lives -= 1
                 if lives == 0:
                     end_of_game = True
@@ -119,7 +118,7 @@ def play_game():
 
         # Join all the elements in the list and turn it into a String.
         print(f"{' '.join(display)}")
-        print("")   
+        print("")
 
         # Check if user has guessed all letters.
         if "_" not in display:
@@ -136,31 +135,31 @@ def play_again():
     print()
     print()
     print("Would you like to play again?")
-    play_again = input("Enter 'yes' or 'no': ")
+    play = input("Enter 'yes' or 'no': ")
 
-    if play_again.lower() == "yes":
+    if play.lower() == "yes":
         clear_console()
         play_game()
 
-    elif play_again.lower() == 'no':
+    elif play.lower() == 'no':
         clear_console()
 
         print()
         print()
-        print("  COWARD! HA HA HA!")
+        print("COWARD! HA HA HA!")
         print()
-        print('  Come back soon ...')
+        print('Come back soon ...')
         print()
-        print('  ***************')
+        print('***************')
         print()
 
         quit()
 
     else:
         print()
-        print('  Invalid entry.')
-        print("  Please enter 'yes' or 'no'.")
-        print('  ***************')
+        print('Invalid entry.')
+        print("Please enter 'yes' or 'no'.")
+        print('***************')
 
 
 def main():
@@ -191,9 +190,9 @@ def main():
         clear_console()
         print(logo)
         print()
-        print('  Invalid entry.')
-        print("  Please enter 'rules' or 'play'")
-        print('  ***************')
+        print('Invalid entry.')
+        print("Please enter 'rules' or 'play'")
+        print('***************')
         main()
 
 
