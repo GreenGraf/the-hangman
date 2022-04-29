@@ -140,6 +140,18 @@ I tested all of the inputs thoughout and at the end of the project to make sure 
 ![Guessed](image/error-same.PNG)
 <br>
 
+* Multiple Letters
+<br>
+
+![Multi Letter](image/error-multi.PNG)
+<br>
+
+* End Screen Wrong Input
+<br>
+
+![End Error](image/error-end.PNG)
+<br>
+
 ## Deployment
 
 * The app was deployed on Heroku using the following method:
@@ -156,6 +168,7 @@ I tested all of the inputs thoughout and at the end of the project to make sure 
     * Repeat step 11 but this time add "node.js" instead of python.
     * Navigate to the "Deploy" tab.
     * Select Github as the deployment method.
+    * To push code to application type "git push heroku main" in the terminal while connected
 
 ## Clone and Fork
 
@@ -184,6 +197,7 @@ I like to say a massive "Thank You" to my mentor, Ben Kavanagh. He's a fantastic
 Python code was adapted and learned from the following sources: 
 * Core logic adapted from this tutorial on [Udemy](https://www.udemy.com/course/    
 * Python tips from Corey Schafer on [YouTube](https://www.youtube.com/channel/      UCCezIgC97PvUuR4_gbFUs5g)
+* More Python codeing tip from [Python Guides](https://pythonguides.com/)
 * The Hangman title from [ASCII](http://www.network-science.de/ascii/) generator.
 
 
