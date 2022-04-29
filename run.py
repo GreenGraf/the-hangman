@@ -77,41 +77,54 @@ def play_game():
     print("")
 
     while not end_of_game:
+        valid_word = True
         guess = input("Guess a letter: ").lower()
-
         clear_console()
 
         if not guess.isalpha():
             print("You did not enter a letter. Please try again.")
-            continue
+            valid_word = False
+
+        if len(guess) > 1:
+            print("You can't guess a whole word!")
+            valid_word = False
 
         if guess in display:
             print(f"You've already guessed '{guess}'. Try again.")
-
-        for position in range(word_length):
-            letter = chosen_word[position]
-            if letter == guess:
-                display[position] = letter
-                print(f"You guessed '{guess}' ... good guess.")
-
-        if guess not in chosen_word:
-            print(f"You guessed '{guess}'. That's not in the word. You lose a life. HA HA HA!")
-            lives -= 1
-            if lives == 0:
-                end_of_game = True
-                print("You lose.")
-                play_again()
-
+            valid_word = False 
         
+        if valid_word:
+            duplicate = False
 
-        # Check if user has guessed all letters.
-        if "_" not in display:
-            end_of_game = True
-            print()
-            print("You win!")
-            play_again()
+            for position in range(word_length):
+                letter = chosen_word[position]
+                if letter == guess:
+                    display[position] = letter
+                    if not duplicate:
+                        print(f"You guessed '{guess}' ... good guess.")
+                        duplicate = True
 
-        
+            if guess not in chosen_word:
+                print(f"You guessed '{guess}'. That's not in the word. You lose a life. HA HA HA!")
+                lives -= 1
+                if lives == 0:
+                    end_of_game = True
+                    print("You lose.")
+                    play_again()
+
+    # Print ASCII Hangman
+    print(stages[lives])
+
+    # Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
+    print("")   
+
+    # Check if user has guessed all letters.
+    if "_" not in display:
+        end_of_game = True
+        print()
+        print("You win!")
+        play_again()
 
 
 def play_again():
