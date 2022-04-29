@@ -10,6 +10,8 @@ Take a Look [Here](https://the-hangman-mikeol.herokuapp.com/)
 
 ## Portfolio Project 3
 
+### Rules
+
 Built with Python and deployed on Heroku, this is a terminal-based version of the popular word guessing game, Hangman. The user must guess each letter of a randomly generated, secret word. The user is represented by a stick figure, to be hung from a gallows. They have six lives with which to win the game. If they guess a letter that is not contained in the secret word, then they lose a life and the hangman draws a part of the users body on the noose.
 
 <br> 
