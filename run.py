@@ -104,7 +104,7 @@ def play_game():
 
             if guess not in chosen_word:
                 print(f"You guessed '{guess}'. That's not in the word. You\
-                         lose a life. HA HA HA!")
+ lose a life. HA HA HA!")
                 lives -= 1
                 if lives == 0:
                     end_of_game = True
