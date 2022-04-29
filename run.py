@@ -51,20 +51,30 @@ def game_rules():
 
 
 def play_game():
-    chosen_word = random.choice(words.word_list)
-    word_length = len(chosen_word)
     """
     Core logic of the game —
     Check guessed letter. Prints correct letter in place and if lives = 0
     then print "You Lose" and end game.
     """
+    chosen_word = random.choice(words.word_list)
+    word_length = len(chosen_word)
+
+    print(chosen_word)
 
     end_of_game = False
     lives = 6
+
+    # Print ASCII Hangman
+    print(stages[lives])
+
     # Create blank spaces for letter in random word
     display = []
     for _ in range(word_length):
         display += "_"
+    
+    # Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
+    print("")
 
     while not end_of_game:
         guess = input("Guess a letter: ").lower()
@@ -92,8 +102,7 @@ def play_game():
                 print("You lose.")
                 play_again()
 
-        # Join all the elements in the list and turn it into a String.
-        print(f"{' '.join(display)}")
+        
 
         # Check if user has guessed all letters.
         if "_" not in display:
@@ -102,8 +111,7 @@ def play_game():
             print("You win!")
             play_again()
 
-        # Print ASCII Hangman
-        print(stages[lives])
+        
 
 
 def play_again():
