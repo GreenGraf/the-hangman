@@ -132,34 +132,40 @@ def play_again():
     """
     This function is to restart the game
     """
-    print()
-    print()
-    print("Would you like to play again?")
-    play = input("Enter 'yes' or 'no': ")
+    valid_input = False
 
-    if play.lower() == "yes":
-        clear_console()
-        play_game()
+    while not valid_input:
+        print()
+        print()
+        print("Would you like to play again?")
+        play = input("Enter 'yes' or 'no': ")
 
-    elif play.lower() == 'no':
-        clear_console()
+        if play.lower() == "yes":
+            valid_input = True
+            clear_console()
+            play_game()
 
-        print()
-        print()
-        print("COWARD! HA HA HA!")
-        print()
-        print('Come back soon ...')
-        print()
-        print('***************')
-        print()
+        if play.lower() == 'no':
+            valid_input = True
+            clear_console()
 
-        quit()
+            print()
+            print()
+            print("COWARD! HA HA HA!")
+            print()
+            print('Come back soon ...')
+            print()
+            print('***************')
+            print()
 
-    else:
-        print()
-        print('Invalid entry.')
-        print("Please enter 'yes' or 'no'.")
-        print('***************')
+            quit()
+
+        if play.lower() != "yes" or "no":
+            valid_input = False
+            clear_console()
+            print()
+            print('Invalid entry.')
+            print('***************')
 
 
 def main():

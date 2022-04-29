@@ -38,6 +38,12 @@ Built with Python and deployed on Heroku, this is a terminal-based version of th
 
 <br> 
 
+## Logic Flow
+
+The logic flow chart was created using Lucidchart.
+
+![Game Logic](image/chart.PNG)
+
 ## Screens
 
 ### Start Screen
@@ -77,9 +83,11 @@ Built with Python and deployed on Heroku, this is a terminal-based version of th
 <br>
 
 ### Errors
-If the user guesses a letter that is in the secret word more than once then the screen will outpus " ... good guess" for each time the letter occurs. Ideally it should only say it once.
+If the user guesses a letter that is in the secret word more than once then the screen will output " ... good guess" for each time the letter occurs. Ideally it should only say it once.
 
 ![Error](image/guess-correct.PNG)
+
+## 
 
 ### Features Left to Implement 
 * Seperate pages for the most significant parts of the park which describes them in further detail.
@@ -95,13 +103,42 @@ If the user guesses a letter that is in the secret word more than once then the 
 
 * **Testing tools are credited and mentioned in the next section**
 
-## Validator Testing
+## Testing
+
+### Validator Testing
 
 The game was deployed and the code was tested using PEP8.
 
 Initially there were quite a number of small errors but they were easilly remidied.
 
 ![PEP8](image/pep8.PNG)
+
+### Manual Testing
+I tested all of the inputs thoughout and at the end of the project to make sure that all of my error handling was correct and that the user was getting the appropriate feedback.
+<br>
+
+* Start Screen
+<br>
+
+![Start Error](image/error-start.PNG)
+<br>
+
+* Rules
+<br>
+
+![Rules Error](image/error-rules.PNG)
+
+* Game 
+<br>
+
+![Game Error](image/erroe-game.PNG)
+<br>
+
+* Already Guessed
+<br>
+
+![Guessed](image/error-same.PNG)
+<br>
 
 ## Deployment
 
