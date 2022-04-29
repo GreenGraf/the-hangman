@@ -26,10 +26,10 @@ def game_rules():
     print('                 RULES:')
     print()
     print('====================================')
-    print('  A secret word will be chosen at random.')
-    print('  You must try to guess what the word is, one letter at a time.')
-    print('  Guess a letter and press enter/return key.')
-    print("  You have six chances to survive the hangman's noose.")
+    print('A secret word will be chosen at random.')
+    print('You must try to guess what the word is, one letter at a time.')
+    print('Guess a letter and press enter/return key.')
+    print("You have six chances to survive the hangman's noose.")
     print()
     print("Would you like to try to beat the Hangman's noose?")
     play_now = input("Enter yes or no: ")
@@ -38,8 +38,8 @@ def game_rules():
         play_game()
 
     elif play_now.lower() == 'no':
-         clear_console()
-         main()
+        clear_console()
+        main()
 
     else:
         clear_console()
@@ -80,7 +80,7 @@ def play_game():
         valid_word = True
         guess = input("Guess a letter: ").lower()
         clear_console()
-
+        
         if not guess.isalpha():
             print("You did not enter a letter. Please try again.")
             valid_word = False
@@ -91,8 +91,8 @@ def play_game():
 
         if guess in display:
             print(f"You've already guessed '{guess}'. Try again.")
-            valid_word = False 
-        
+            valid_word = False
+
         if valid_word:
             duplicate = False
 
@@ -110,6 +110,8 @@ def play_game():
                 if lives == 0:
                     end_of_game = True
                     print("You lose.")
+                    # Print ASCII Hangman
+                    print(stages[lives])
                     play_again()
 
     # Print ASCII Hangman
@@ -195,4 +197,5 @@ def main():
         main()
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,3 +1,8 @@
+"""
+Module for artwork containing:
+- stages
+- logo
+"""
 stages = ['''
   +---+
   |   |
